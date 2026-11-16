@@ -1,0 +1,8 @@
+{
+  "name": "KPX 계통한계가격(SMP·BLMP) 조회",
+  "description": "한국전력거래소 계통한계가격 시간별 SMP(육지, 제주, 통합) 및 BLMP 데이터를 기간별로 조회하는 표 기반 웹 애플리케이션",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&amp;family=Plus+Jakarta+Sans:wght@400;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"error-container":"#ffdad6","surface-container":"#e5eeff","on-error-container":"#93000a","inverse-primary":"#ffb599","tertiary-fixed-dim":"#4edea3","surface-tint":"#a73a00","surface-bright":"#f8f9ff","on-surface-variant":"#5a4138","outline-variant":"#e2bfb2","background":"#f8f9ff","on-background":"#0b1c30","on-secondary-fixed-variant":"#004b73","secondary-fixed-dim":"#93ccff","primary-container":"#cc4900","surface-dim":"#cbdbf5","inverse-on-surface":"#eaf1ff","on-tertiary":"#ffffff","primary-fixed":"#ffdbce","on-primary-fixed":"#370e00","secondary-fixed":"#cce5ff","tertiary-container":"#00855b","on-error":"#ffffff","on-tertiary-fixed":"#002113","error":"#ba1a1a","inverse-surface":"#213145","tertiary":"#006947","secondary":"#006398","on-secondary":"#ffffff","on-primary":"#ffffff","on-secondary-container":"#00476e","on-secondary-fixed":"#001d31","on-surface":"#0b1c30","on-tertiary-fixed-variant":"#005236","surface-container-highest":"#d3e4fe","on-tertiary-container":"#f5fff6","tertiary-fixed":"#6ffbbe","surface-variant":"#d3e4fe","on-primary-fixed-variant":"#7f2b00","secondary-container":"#5bb8fe","surface-container-lowest":"#ffffff","surface":"#f8f9ff","surface-container-high":"#dce9ff","primary":"#a33900","on-primary-container":"#fffbff","surface-container-low":"#eff4ff","primary-fixed-dim":"#ffb599","outline":"#8e7166"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin":"1rem","space-sm":"0.5rem","space-md":"1rem","space-lg":"1.5rem","margin-tablet":"1.5rem","space-xs":"0.25rem","space-xl":"2.5rem","gutter":"1.25rem","gutter-desktop":"1.5rem","margin-desktop":"2rem"},"fontFamily":{"label-md":["JetBrains Mono"],"body-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"metric-num":["JetBrains Mono"],"display-lg-mobile":["Space Grotesk"],"label-sm":["JetBrains Mono"],"body-sm":["Plus Jakarta Sans"],"display-lg":["Space Grotesk"],"title-md":["Plus Jakarta Sans"],"headline-lg":["Space Grotesk"],"headline-md":["Space Grotesk"]},"fontSize":{"label-md":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.04em","fontWeight":"500"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"body-md":["0.875rem",{"lineHeight":"1.375rem","fontWeight":"400"}],"metric-num":["1.75rem",{"lineHeight":"2rem","letterSpacing":"-0.03em","fontWeight":"700"}],"display-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.01em","fontWeight":"700"}],"label-sm":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.05em","fontWeight":"500"}],"body-sm":["0.75rem",{"lineHeight":"1.125rem","fontWeight":"400"}],"display-lg":["2.5rem",{"lineHeight":"3rem","letterSpacing":"-0.02em","fontWeight":"700"}],"title-md":["1rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"600"}],"headline-lg":["1.875rem",{"lineHeight":"2.25rem","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.01em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col justify-between py-6"><div class="flex flex-col gap-6"><div class="px-6 flex items-center gap-3"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">bolt</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md font-bold text-on-surface leading-tight tracking-tight">SMP Explorer</span><span class="font-label-sm text-label-sm text-on-surface-variant">전력거래소 시장 데이터</span></div></div><div class="px-4"><div class="px-3 py-2 bg-surface-container rounded-lg flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">전력망 모드</span><span class="font-label-sm text-label-sm text-tertiary font-bold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>정상 가동</span></div></div><nav class="flex flex-col gap-1 px-4" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><a aria-current="page" class="flex items-center gap-3 px-3 py-2.5 transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm" data-path="hourly-smp" href="#"><span class="material-symbols-outlined text-[20px]">schedule</span><span>시간별 SMP 현황</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="regional-spread" href="#"><span class="material-symbols-outlined text-[20px]">map</span><span>육지·제주 비교</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="market-trends" href="#"><span class="material-symbols-outlined text-[20px]">trending_up</span><span>시장 트렌드 분석</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="beginner-guide" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>입문자 필수 가이드</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="market-glossary" href="#"><span class="material-symbols-outlined text-[20px]">help_center</span><span>전력 용어 사전</span></a></nav></div><div class="px-4 flex flex-col gap-2"><div class="p-3 bg-surface-container-high rounded-xl flex flex-col gap-2"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">info</span><span class="font-label-md text-label-md text-on-surface font-semibold">KPX API 연동 안내</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">매시간 정시+5분 간격 자동 갱신됩니다.</p></div><a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="system-settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span>데이터 피드 설정</span></a></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] z-40 flex items-center justify-between px-8"><div class="flex items-center gap-3"><div class="flex items-center gap-2 px-3 py-1 bg-surface-container-lowest rounded-full shadow-[0_1px_3px_0_rgba(15,23,42,0.04)]"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span class="font-label-sm text-label-sm text-on-surface font-semibold">실시간 전력거래소 연동</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">기준시점: 오늘 14:00 KST</span></div><div class="flex items-center gap-4"><div class="flex items-center bg-surface-container-low rounded-lg px-3 py-1.5 gap-2"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">search</span><input class="bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none w-48" placeholder="발전원, 날짜 또는 용어 검색..." type="text"/></div><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface font-semibold flex items-center gap-1 transition-colors" data-path="beginner-guide" href="#"><span class="material-symbols-outlined text-[18px]">school</span><span>초보자 가이드</span></a><button class="relative p-2 rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-8 pb-12"><div class="flex flex-col w-full gap-6">
+<!-- Top Header & Global Filter Area -->
+<section class="flex flex-col gap-4">
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-bold tracking-wide uppercase">실시간 시장 지표</span>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">KPX 실시간 수신</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">계통한계가격(SMP) 시간별 조회</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">전력시장에서 거래되는 전력의 24시간대별 한계 가격 및 변동 패턴 분석</p>
+</div>
+<!-- Action Controls -->
+<div class="flex items-center gap-2.5 flex-wrap sm:flex-nowrap">
+<!-- Date Selector Button -->
+<div class="relative flex items-center bg-surface-container-lowest shadow-sm rounded-xl px-3.5 py-2 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-primary text-[20px] mr-2">calendar_today</span>
+<div class="flex flex-col text-left">
+<span class="font-label-sm text-label-sm text-on-surface-variant">조회 기준일</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">2025년 5월 15일 (목)</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] ml-2 group-hover:translate-y-0.5 transition-transform">expand_more</span>
+</div>
+<!-- Regional Segmented Chips -->
+<div class="flex items-center p-1 bg-surface-container rounded-xl">
+<button class="px-3.5 py-1.5 rounded-lg font-body-sm text-body-sm font-bold bg-surface-container-lowest text-primary shadow-sm transition-all" type="button">육지</button>
+<button class="px-3.5 py-1.5 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-all" type="button">제주</button>
+<button class="px-3.5 py-1.5 rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-all" type="button">통합</button>
+</div>
+<!-- Refresh Action Button -->
+<button class="p-2.5 bg-surface-container-lowest text-on-surface shadow-sm rounded-xl hover:bg-primary-fixed hover:text-on-primary-fixed transition-all flex items-center justify-center" id="refresh-btn" title="데이터 새로고침" type="button">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-500" id="refresh-icon">refresh</span>
+</button>
+</div>
+</div>
+<!-- Beginner Concept Banner -->
+<div class="flex items-center gap-3 px-4 py-3 bg-surface-container-low rounded-xl text-on-surface shadow-sm relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="w-7 h-7 rounded-lg bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">lightbulb</span>
+</div>
+<div class="flex flex-col md:flex-row md:items-center gap-1 md:gap-3 flex-1 min-w-0">
+<span class="font-title-md text-title-md font-bold text-primary shrink-0">SMP(System Marginal Price)란?</span>
+<span class="font-body-md text-body-md text-on-surface-variant">발전소에서 생산된 전기를 구매할 때 적용되는 전력시장 도매 거래 가격입니다. 수요가 많아질수록 가장 비싼 발전기(LNG 등)가 가동되어 SMP가 상승합니다.</span>
+</div>
+</div>
+</section>
+<!-- Core Content Grid (Macro Stats + Visual Chart) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- Left Column: KPI Metric Summary & Operational Cards (4 cols on lg) -->
+<div class="lg:col-span-4 flex flex-col gap-4">
+<!-- Main Daily Average Price Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm flex flex-col gap-4 relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">하루 가중평균 SMP</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-metric-num text-[2.75rem] leading-none font-bold text-on-surface tracking-tight" id="avg-price-display">142.85</span>
+<span class="font-body-md text-body-md text-on-surface-variant font-semibold">원/kWh</span>
+</div>
+</div>
+<!-- Trend Badge -->
+<div class="flex items-center gap-1 px-2.5 py-1 bg-primary-fixed text-on-primary-fixed rounded-full shadow-xs">
+<span class="material-symbols-outlined text-[16px] font-bold">trending_up</span>
+<span class="font-label-sm text-label-sm font-bold">+4.20 (+3.03%)</span>
+</div>
+</div>
+<!-- Sparkline Vector -->
+<div class="w-full h-11 py-1">
+<svg class="w-full h-full text-primary" fill="none" preserveaspectratio="none" viewbox="0 0 200 40">
+<path d="M0,32 Q25,35 45,34 T90,24 T130,28 T165,6 T200,18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<path d="M0,32 Q25,35 45,34 T90,24 T130,28 T165,6 T200,18 L200,40 L0,40 Z" fill="currentColor" fill-opacity="0.12"></path>
+</svg>
+</div>
+<div class="pt-3 flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant border-t-0 bg-surface-container-low px-3.5 py-2.5 rounded-xl">
+<span>전일 평균: <strong class="text-on-surface font-semibold font-metric-num">138.65</strong> 원</span>
+<span>주간 평균: <strong class="text-on-surface font-semibold font-metric-num">140.12</strong> 원</span>
+</div>
+</div>
+<!-- High / Low Metric Strip -->
+<div class="grid grid-cols-2 gap-3">
+<!-- Peak Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">local_fire_department</span> 최고가 (피크)
+            </span>
+<span class="px-2 py-0.5 bg-primary-fixed text-on-primary-fixed rounded-md font-label-sm text-label-sm font-bold">19:00</span>
+</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-metric-num text-headline-md font-bold text-on-surface">168.40</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">원/kWh</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">저녁 점등·가전 사용 피크</span>
+</div>
+<!-- Off-Peak Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">nightlight</span> 최저가 (경부하)
+            </span>
+<span class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold rounded-md">04:00</span>
+</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-metric-num text-headline-md font-bold text-on-surface">115.10</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">원/kWh</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">심야 기저 발전 위주</span>
+</div>
+</div>
+<!-- Beginner Learning Checklist Card -->
+<div class="bg-primary-fixed/40 rounded-2xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">school</span>
+<span class="font-title-md text-title-md font-bold text-on-primary-fixed">입문자 전력시장 체크포인트</span>
+</div>
+<ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-2">
+<span class="text-primary font-bold shrink-0">▪</span>
+<span>진한 주황색 막대는 <strong>피크 부하 시간대(17시~21시)</strong>로 하루 중 전력 사용량이 가장 집중되는 구간입니다.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary font-bold shrink-0">▪</span>
+<span>태양광이 활발한 낮 11시~14시는 발전량이 늘어나 가격이 일시적으로 안정화되는 <em>'덕 커브(Duck Curve)'</em> 형태가 관측됩니다.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary font-bold shrink-0">▪</span>
+<span>SMP는 태양광 발전소(RPS) 사업자의 핵심 판매 수익(SMP+REC) 구성 요소입니다.</span>
+</li>
+</ul>
+</div>
+<!-- Regional Quick Compare Pill Container -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">compare_arrows</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-bold text-on-surface">육지 vs 제주 스프레드</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">제주 151.30원 (차이: +8.45원)</span>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high font-body-sm text-body-sm font-semibold text-primary hover:bg-primary hover:text-on-primary transition-all" type="button">상세비교</button>
+</div>
+</div>
+<!-- Right Column: Interactive 24-Hour SMP Bar Chart (8 cols on lg) -->
+<div class="lg:col-span-8 flex flex-col gap-4">
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm flex flex-col gap-6">
+<!-- Chart Header & Legend -->
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface">24시간 시간별 SMP 추이</h2>
+<span class="font-label-sm text-label-sm text-tertiary px-2 py-0.5 bg-surface-container rounded-full font-bold">확정치</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">01시부터 24시까지 시간대별 원/kWh 정산 단가 (실시간 기준 14시)</p>
+</div>
+<!-- Legends -->
+<div class="flex items-center gap-4 text-xs font-body-sm text-on-surface-variant flex-wrap">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-primary"></span>
+<span>피크 시간대</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-primary-fixed"></span>
+<span>일반 시간대</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-surface-container-high"></span>
+<span>경부하(심야)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-4 h-0.5 border-t border-dashed border-primary"></span>
+<span>일평균 (142.85원)</span>
+</div>
+</div>
+</div>
+<!-- Chart Graphic Container -->
+<div class="relative w-full h-80 pt-6 pb-2 select-none flex flex-col justify-end">
+<!-- Background Horizontal Scale Gridlines -->
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none pb-9 pt-6">
+<div class="w-full flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="w-full border-b border-surface-container-high"></div>
+<span class="pl-2 shrink-0">180원</span>
+</div>
+<div class="w-full flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="w-full border-b border-surface-container-high"></div>
+<span class="pl-2 shrink-0">150원</span>
+</div>
+<!-- Average Reference Line -->
+<div class="w-full flex items-center justify-between text-primary font-label-sm text-label-sm relative">
+<div class="w-full border-b-2 border-dashed border-primary/60"></div>
+<span class="pl-2 shrink-0 font-bold bg-surface-container-lowest text-primary">평균 142.85원</span>
+</div>
+<div class="w-full flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="w-full border-b border-surface-container-high"></div>
+<span class="pl-2 shrink-0">120원</span>
+</div>
+<div class="w-full flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="w-full border-b border-surface-container-high"></div>
+<span class="pl-2 shrink-0">90원</span>
+</div>
+</div>
+<!-- Bar Chart Columns (24 Hours) -->
+<div class="relative z-10 w-full h-64 flex items-end justify-between gap-1 sm:gap-1.5 pr-14" id="smp-chart-bars">
+<!-- 01H -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group cursor-pointer relative" data-hour="01" data-val="120.40">
+<div class="w-full bg-surface-container-high group-hover:bg-primary-fixed transition-all rounded-t-sm" style="height: 38%;"></div>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-2">01</span>
+</div>
+<!-- 02H -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group cursor-pointer relative" data-hour="02" data-val="118.20">
+<div class="w-full bg-surface-container-high group-hover:bg-primary-fixed transition-all rounded-t-sm" style="height: 35%;"></div>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-2">02</span>
+</div>
+<!-- 03H -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group cursor-pointer relative" data-hour="03" data-val="116.50">
+<div class="w-full bg-surface-container-high group-hover:bg-primary-fixed transition-all rounded-t-sm" style="height: 33%;"></div>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-2">03</span>
+</div>
+<!-- 04H (Min) -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group cursor-pointer relative" data-hour="04" data-val="115.10">
+<div class="absolute -top-7 px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[9px] font-bold">최저</div>
+<div class="w-full bg-secondary-container group-hover:bg-secondary transition-all rounded-t-sm" style="height: 30%;"></div>
+<span class="font-label-sm text-[10px] text-secondary font-bold mt-2">04</span>
+</div>
+<!-- 05H -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group cursor-pointer relative" data-hour="05" data-val="119.80">
+<div class="w-full bg-surface-container-high group-hover:bg-primary-fixed transition-all rounded-t-sm" style="height: 37%;"></div>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-2">05</span>
+</div>
+<!-- 06H -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group cursor-pointer relative" data-hour="06" data-val="128.40">
+<div class="w-full bg-surface-container-highest group-hover:bg-primary-fixed transition-all rounded-t-sm" style="height: 48%;"></div>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-2">06</span>
+</div>
+<!-- 07H -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group cursor-pointer relative" data-hour="07" data-val="136.20">
+<div class="w-full bg-primary-fixed group-hover:bg-primary transition-all rounded-t-sm" style="height: 57%;"></div>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-2">07</span>
+</div>
+<!-- 08H -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group cursor-pointer relative" data-hour="08" data-val="144.90">
+<div class="w-full bg-primary-fixed group-hover:bg-primary transition-all rounded-t-sm" style="height: 64%;"></div>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-2">08</span>
+</div>
+<!-- 09H -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group cursor-pointer relative" data-hour="09" data-val="149.30">
+<div class="w-full bg-primary-fixed-dim group-hover:bg-primary transition-all rounded-t-sm" style="height: 68%;"></div>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-2">09</span>
+</div>
+<!-- 10H -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group cursor-pointer relative" data-hour="10" data-val="147.10">
+<div class="w-full bg-primary-fixed group-hover:bg-primary transition-all rounded-t-sm" style="height: 66%;"></div>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-2">10</span>
+</div>
+<!-- 11H (Solar active) -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group cursor-pointer relative" data-hour="11" data-val="139.50">
+<div class="w-full bg-primary-fixed group-hover:bg-primary transition-all rounded-t-sm" style="height: 59%;"></div>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-2">11</span>
+</div>
+<!-- 12H -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group cursor-pointer relative" data-hour="12" data-val="135.20">
+<div class="w-full bg-primary-fixed group-hover:bg-primary transition-all rounded-t-sm" style="height: 54%;"></div>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-2">12</span>
+</div>
+<!-- 13H -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group cursor-pointer relative" data-hour="13" data-val="137.80">
+<div class="w-full bg-primary-fixed group-hover:bg-primary transition-all rounded-t-sm" style="height: 56%;"></div>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-2">13</span>
+</div>
+<!-- 14H (Current Hour Marked) -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group cursor-pointer relative" data-hour="14" data-val="142.10">
+<div class="absolute -top-7 flex items-center justify-center">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+</span>
+</div>
+<div class="w-full bg-primary shadow-sm rounded-t-sm" style="height: 61%;"></div>
+<span class="font-label-sm text-[10px] text-primary font-bold mt-2">14*</span>
+</div>
+<!-- 15H -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group cursor-pointer relative" data-hour="15" data-val="145.60">
+<div class="w-full bg-primary-fixed-dim group-hover:bg-primary transition-all rounded-t-sm" style="height: 65%;"></div>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-2">15</span>
+</div>
+<!-- 16H -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group cursor-pointer relative" data-hour="16" data-val="152.00">
+<div class="w-full bg-primary-fixed-dim group-hover:bg-primary transition-all rounded-t-sm" style="height: 72%;"></div>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-2">16</span>
+</div>
+<!-- 17H (Peak Start) -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group cursor-pointer relative" data-hour="17" data-val="162.70">
+<div class="w-full bg-primary group-hover:bg-primary-container transition-all rounded-t-sm" style="height: 84%;"></div>
+<span class="font-label-sm text-[10px] text-primary font-bold mt-2">17</span>
+</div>
+<!-- 18H (Peak) -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group cursor-pointer relative" data-hour="18" data-val="166.80">
+<div class="w-full bg-primary group-hover:bg-primary-container transition-all rounded-t-sm" style="height: 89%;"></div>
+<span class="font-label-sm text-[10px] text-primary font-bold mt-2">18</span>
+</div>
+<!-- 19H (Max Peak) -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group cursor-pointer relative" data-hour="19" data-val="168.40">
+<div class="absolute -top-7 px-1.5 py-0.5 rounded bg-primary text-on-primary font-label-sm text-[9px] font-bold shadow-sm">최고</div>
+<div class="w-full bg-primary-container group-hover:brightness-110 transition-all rounded-t-sm" style="height: 94%;"></div>
+<span class="font-label-sm text-[10px] text-primary font-bold mt-2">19</span>
+</div>
+<!-- 20H (Peak) -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group cursor-pointer relative" data-hour="20" data-val="163.50">
+<div class="w-full bg-primary group-hover:bg-primary-container transition-all rounded-t-sm" style="height: 85%;"></div>
+<span class="font-label-sm text-[10px] text-primary font-bold mt-2">20</span>
+</div>
+<!-- 21H -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group cursor-pointer relative" data-hour="21" data-val="155.10">
+<div class="w-full bg-primary-fixed-dim group-hover:bg-primary transition-all rounded-t-sm" style="height: 75%;"></div>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-2">21</span>
+</div>
+<!-- 22H -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group cursor-pointer relative" data-hour="22" data-val="144.30">
+<div class="w-full bg-primary-fixed group-hover:bg-primary transition-all rounded-t-sm" style="height: 63%;"></div>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-2">22</span>
+</div>
+<!-- 23H -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group cursor-pointer relative" data-hour="23" data-val="134.00">
+<div class="w-full bg-surface-container-highest group-hover:bg-primary-fixed transition-all rounded-t-sm" style="height: 52%;"></div>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-2">23</span>
+</div>
+<!-- 24H -->
+<div class="flex-1 flex flex-col items-center h-full justify-end group cursor-pointer relative" data-hour="24" data-val="124.60">
+<div class="w-full bg-surface-container-high group-hover:bg-primary-fixed transition-all rounded-t-sm" style="height: 42%;"></div>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-2">24</span>
+</div>
+</div>
+</div>
+<!-- Interactive Hover Detail Card / Live Inspector -->
+<div class="p-3.5 bg-surface-container-low rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-on-surface">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">touch_app</span>
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-bold text-on-surface" id="inspect-hour">현재 14시</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">가격:</span>
+<span class="font-metric-num text-title-md font-bold text-primary" id="inspect-price">142.10 원/kWh</span>
+</div>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span>막대에 마우스를 올리면 해당 시각 단가를 확인할 수 있습니다.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Section: AI Market Analysis & Data Source Footnote -->
+<section class="flex flex-col gap-4">
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm flex flex-col gap-5">
+<!-- AI Header Strip -->
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pb-3 border-b-0">
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary text-on-primary shadow-xs">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+<span class="font-label-sm text-label-sm font-bold tracking-wide">AI 시장 해설</span>
+</div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface">오늘의 SMP 변동 원인 및 분석</h3>
+</div>
+<!-- Regenerate Explanation Button -->
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm font-medium transition-colors" id="regenerate-ai-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span>해설 새로고침</span>
+</button>
+</div>
+<!-- AI Content Box -->
+<div class="p-4 bg-surface-container-low rounded-xl flex flex-col gap-3 font-body-md text-body-md leading-relaxed text-on-surface" id="ai-narrative-box">
+<p>
+          오늘의 SMP는 저녁 시간대(18~20시) 냉방 및 조명 수요 집중과 LNG 복합화력 발전기 가동 증가로 인해 <strong>최고 168.40 원/kWh</strong>까지 상승했습니다. 반면 심야 시간대(02~06시)는 기저부하 발전(원자력·석탄) 비중이 높아 110원대 초반의 안정적인 흐름을 유지했습니다.
+        </p>
+<div class="p-3 bg-surface-container-lowest rounded-lg flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">tips_and_updates</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong class="text-primary font-semibold">입문자 실전 팁:</strong> 태양광 발전 비중이 높은 낮 시간(11~14시)에는 신재생에너지 공급 확대로 인해 피크 시간 대비 SMP 상승폭이 제한되는 경향이 뚜렷합니다. 태양광 발전 사업자라면 ESS 충·방전 스케줄링 시 저녁 피크(17~20시) 방전을 고려하는 것이 수익성에 유리합니다.
+          </p>
+</div>
+</div>
+<!-- Footer KPX Attribution and Metadata -->
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pt-2 text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">database</span>
+<span>데이터 출처: <strong>전력거래소(KPX)</strong> 전력통계정보시스템 (EPSIS) 실시간 공시 기준</span>
+</div>
+<div class="flex items-center gap-3">
+<span>정산 방식: 가중평균 한계가격</span>
+<span>최종 갱신: <time class="font-semibold text-on-surface" datetime="2025-05-15T15:30:00+09:00">2025-05-15 15:30:00 KST</time></span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple interactive micro-behaviors for bar hover & refresh
+  document.addEventListener('DOMContentLoaded', () => {
+    const bars = document.querySelectorAll('#smp-chart-bars > div');
+    const inspectHour = document.getElementById('inspect-hour');
+    const inspectPrice = document.getElementById('inspect-price');
+    const refreshBtn = document.getElementById('refresh-btn');
+    const refreshIcon = document.getElementById('refresh-icon');
+    const regenBtn = document.getElementById('regenerate-ai-btn');
+    const aiBox = document.getElementById('ai-narrative-box');
+
+    // Hover interactive inspect
+    bars.forEach(bar => {
+      bar.addEventListener('mouseenter', () => {
+        const hour = bar.getAttribute('data-hour');
+        const val = bar.getAttribute('data-val');
+        if (hour && val) {
+          inspectHour.textContent = `${hour}시 기준`;
+          inspectPrice.textContent = `${val} 원/kWh`;
+        }
+      });
+    });
+
+    // Refresh simulation
+    if (refreshBtn && refreshIcon) {
+      refreshBtn.addEventListener('click', () => {
+        refreshIcon.classList.add('rotate-180');
+        setTimeout(() => {
+          refreshIcon.classList.remove('rotate-180');
+        }, 500);
+      });
+    }
+
+    // AI regenerate feedback
+    if (regenBtn && aiBox) {
+      regenBtn.addEventListener('click', () => {
+        aiBox.classList.add('opacity-50');
+        setTimeout(() => {
+          aiBox.classList.remove('opacity-50');
+        }, 400);
+      });
+    }
+  });
+</script></main></div></body></html>
